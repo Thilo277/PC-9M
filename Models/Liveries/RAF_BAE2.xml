@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!-- Johan G -->
+
+<PropertyList>
+
+<sim>
+ <model>
+  <livery>
+   <name type="string">RAF / BAe #2</name>
+   <texture>Liveries/RAF_BAE2.png</texture>
+  </livery>
+  <livery-logo>
+   <texture>Liveries/RAF_BAE2.png</texture>
+  </livery-logo>
+  <civilian type="bool">true</civilian>
+ </model>
+ <rendering>
+    <refl_correction type="string">-0.32</refl_correction>
+    </rendering>
+</sim>
+
+</PropertyList>

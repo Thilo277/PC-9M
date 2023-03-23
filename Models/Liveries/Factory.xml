@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<!-- Johan G -->
+
+<PropertyList>
+
+<sim>
+ <model>
+  <livery>
+   <name type="string">Pilatus Factory Demonstrator</name>
+   <texture>Liveries/Factory.png</texture>
+   <shininess type="float">-0.75</shininess>
+  </livery>
+  <livery-logo>
+   <texture>Liveries/Factory.png</texture>
+  </livery-logo>
+  <civilian type="bool">true</civilian>
+ </model>
+ <rendering>
+    <refl_correction type="string">-0.27</refl_correction>
+    </rendering>
+</sim>
+
+</PropertyList>

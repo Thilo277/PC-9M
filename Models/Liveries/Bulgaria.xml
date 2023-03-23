@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+ <model>
+  <livery>
+   <name type="string">Bulgarian Air Force 664</name>
+   <texture>Liveries/Bulgaria.png</texture>
+  </livery>
+  <livery-logo>
+   <texture>Liveries/Bulgaria.png</texture>
+  </livery-logo>
+  <civilian type="bool">true</civilian>
+ </model>
+ <rendering>
+    <refl_correction type="string">-1</refl_correction>
+    </rendering>
+</sim>
+
+</PropertyList>

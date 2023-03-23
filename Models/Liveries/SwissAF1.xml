@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!-- Johan G -->
+
+<PropertyList>
+
+<sim>
+ <model>
+  <livery>
+   <name type="string">Swiss Air Force "Patrouille Suisse"</name>
+   <texture>Liveries/SwissAF1.png</texture>
+  </livery>
+  <livery-logo>
+   <texture>Liveries/SwissAF1.png</texture>
+  </livery-logo>
+  <civilian type="bool">true</civilian>
+ </model>
+ <rendering>
+    <refl_correction type="string">-0.3</refl_correction>
+    </rendering>
+</sim>
+
+</PropertyList>

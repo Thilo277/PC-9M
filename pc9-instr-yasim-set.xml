@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<!--
+  Tucano T1 multiplayer passenger view.
+
+  Copyright (C) 2009  Anders Gidenstam  (anders(at)gidenstam.org)
+  This file is licensed under the GPL license version 2 or later.
+-->
+<!--
+  Usage: fgfs - -prop:/sim/remote/pilot-callsign="remote pilot callsign" - -aircraft=Fi-156-passenger
+-->
+<PropertyList>
+
+ <sim>
+
+  <description>Pilatus PC-9M Instructor</description>
+  <author>Mathias Froehlich, Algernon</author>
+  <status>vAlpha 0.9</status>
+  <aircraft-version>$Id$</aircraft-version>
+  
+  <flight-model>null</flight-model>
+  
+ <startup>
+<splash-texture>Aircraft/PC-9M/splash.png</splash-texture>
+</startup>
+
+  <presets>
+   <onground type="bool">false</onground>
+   <altitude-agl-ft type="double">30.0</altitude-agl-ft>
+  </presets>
+
+  <!-- 3d model -->
+  <model>
+   <path>Aircraft/PC-9M/Models/PC9-BackSeat.xml</path>
+  </model>
+  
+   <rendering>
+    <refl_correction type="string">-0.27</refl_correction>
+    </rendering>
+  
+     <mp-systems>
+					<radar-enabled type="bool">true</radar-enabled>
+					<ecm-rwr-enabled type="bool">true</ecm-rwr-enabled>
+					<combat-enabled type="bool">true</combat-enabled>
+				</mp-systems>
+				
+		<multiplay>
+           <chat_display>1</chat_display>
+      <generic> 
+       	  
+        <!-- Nav lights on -->
+      <int n="0" alias="/controls/lighting/nav-lights-switch" />
+      <!-- Beacon on -->
+      <int n="1" alias="/controls/lighting/beacon-switch" />
+      <!-- Landing lights on -->
+      <int n="2" alias="/controls/lighting/landing-lights-switch" />
+	    <!-- Taxi light on -->
+      <int n="3" alias="/controls/lighting/taxi-light-switch" />
+	  
+	  <int n="7" alias="/sim/crashed" />
+			
+      </generic>
+    </multiplay>			
+
+  <!-- Views -->
+  <view n="0">
+   <!-- Passenger's position. -->
+   <name>Copilot View</name>
+   <type>lookfrom</type>
+   <internal type="bool">true</internal>
+   <config>
+    <internal type="bool">true</internal>
+    <from-model type="bool">false</from-model>
+    <from-model-idx type="int">0</from-model-idx>
+    <eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
+    <eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
+    <eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
+    <eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>
+    <eye-pitch-deg-path>/orientation/pitch-deg</eye-pitch-deg-path>
+    <eye-roll-deg-path>/orientation/roll-deg</eye-roll-deg-path>
+
+    <!-- x/y/z == right/up/back -->
+              <x-offset-m archive="y"> 0.00 </x-offset-m>  
+        <y-offset-m archive="y"> 1.33 </y-offset-m>
+        <z-offset-m archive="y"> 1.12 </z-offset-m>
+    <pitch-offset-deg>0</pitch-offset-deg>
+    <default-field-of-view-deg type="double">63.7.0</default-field-of-view-deg>
+   </config>
+  </view>
+
+ 
+  <chase-distance-m type="double">-18.0</chase-distance-m>
+
+ <sound>
+<path>Aircraft/PC-9M/Sounds/PC-9M-sound.xml</path>
+</sound>
+
+		
+
+  <!-- Aircraft specific help. -->
+  <!-- help include="help.xml"/ -->
+
+  <!-- systems>
+   <electrical>
+    <path/>
+   </electrical>
+  </systems>
+  <instrumentation>
+   <path/>
+  </instrumentation -->
+
+  <menubar>
+   <default>
+    <menu n="100">
+     <label>PC9M</label>
+     <item>
+      <label>Select Pilot</label>
+      <binding>
+       <command>nasal</command>
+       <script>
+        dual_control_tools.
+          copilot_dialog.show(aircraft_dual_control.pilot_type);
+       </script>
+      </binding>
+     </item>
+    </menu>
+   </default>
+  </menubar>
+
+ </sim>
+ 
+ <instrumentation>
+<transponder>
+<inputs>
+<serviceable type="bool">true</serviceable>
+</inputs>
+</transponder>
+<nav n="0">
+<serviceable type="bool">1</serviceable>
+</nav>
+<nav n="1">
+<serviceable type="bool">1</serviceable>
+</nav>
+<comm n="0">
+<serviceable type="bool">1</serviceable>
+</comm>
+<comm n="1">
+<serviceable type="bool">1</serviceable>
+</comm>
+    
+<airspeed-indicator>
+<limit-indicated-speed-kt type="double">280</limit-indicated-speed-kt>	
+<index n="0" type="double">95</index>
+<index n="1" type="double">145</index>
+</airspeed-indicator>
+    
+<g-meter>
+<g-max archive="y" type="double">1</g-max>
+<g-min archive="y" type="double">1</g-min>
+</g-meter>
+</instrumentation>
+
+ <nasal>
+ 
+ <PC9M>
+		<file>Aircraft/PC-9M/Nasal/AFDS.nas</file>
+		<file>Aircraft/PC-9M/Nasal/systems.nas</file>
+<file>Aircraft/PC-9M/Nasal/liveries.nas</file>
+<file>Aircraft/PC-9M/Nasal/limits.nas</file>
+<file>Aircraft/PC-9M/Nasal/vhf22.nas</file>
+<file>Aircraft/PC-9M/Nasal/vir32.nas</file>
+<file>Aircraft/PC-9M/Nasal/crash.nas</file>
+	</PC9M>
+	
+		<lights>
+      <file>Aircraft/PC-9M/Nasal/Lights.nas</file>
+    </lights>
+	
+	<dialogs>
+		<file>Aircraft/PC-9M/Nasal/dialogs.nas</file>
+	</dialogs>
+	<dmesw>
+		<file>Aircraft/PC-9M/Nasal/dmesw.nas</file>
+	</dmesw>
+<tyresmoke>
+<file>Aircraft/PC-9M/Nasal/tyresmoke.nas</file>
+</tyresmoke>
+<pc-engine>
+<file>Aircraft/PC-9M/Nasal/pc-engine.nas</file>
+<module>pc</module>
+</pc-engine>
+
+  <dual_control_tools>
+   <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+  </dual_control_tools>
+  <aircraft_dual_control>
+   <file>Aircraft/PC-9M/Nasal/pc9-dual-control.nas</file>
+  </aircraft_dual_control>
+  <dual_control>
+   <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+  </dual_control>
+  
+ </nasal>
+
+</PropertyList>

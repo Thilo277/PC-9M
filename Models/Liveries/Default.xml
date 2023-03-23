@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+ <model>
+  <livery>
+   <name type="string">Croatian Air Force 057</name>
+   <texture>Liveries/Default.png</texture>
+  </livery>
+  <livery-logo>
+   <texture>Liveries/Default.png</texture>
+  </livery-logo>
+  <civilian type="bool">true</civilian>
+ </model>
+ <rendering>
+    <refl_correction type="string">-0.27</refl_correction>
+    </rendering>
+</sim>
+
+</PropertyList>
