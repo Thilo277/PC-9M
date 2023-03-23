@@ -113,6 +113,7 @@
       <int n="3" alias="/controls/lighting/taxi-light-switch" />
 	  
 	  <int n="7" alias="/sim/crashed" />
+    <int n="19">0</int>
 	  
 	   <float n="0" alias="/velocities/groundspeed-kt" />
 		  <float n="1" alias="/position/altitude-agl-ft" />
@@ -389,6 +390,15 @@
         <binding>
           <command>nasal</command>
           <script>dialogs.Radio.open()</script>
+        </binding>
+      </key>
+
+      <key n="113">
+        <name>q</name>
+        <desc>toggle smoke</desc>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/multiplay/generic/int[19]</property>
         </binding>
       </key>
     </keyboard>

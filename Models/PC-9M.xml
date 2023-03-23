@@ -17,6 +17,15 @@
   <path>Aircraft/PC-9M/Models/Cockpit/Cockpit.xml</path>
  </model>
 
+ <model>
+    <path>Effects/smoke/smoke.xml</path>
+    <offsets>
+        <x-m>0</x-m>
+        <y-m>0</y-m>
+        <z-m>0</z-m>
+    </offsets>
+</model>
+
  <!--<model>
   <path>Aircraft/PC-9M/Models/PC-9M-3dshadow.xml</path>
  </model>-->
