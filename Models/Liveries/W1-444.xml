@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+ <model>
+  <livery>
+   <name type="string">Israeli Air Forces W1-444</name>
+   <texture>Liveries/W1-444.png</texture>
+  </livery>
+  <livery-logo>
+   <texture>Liveries/Mexico.png</texture>
+  </livery-logo>
+  <civilian type="bool">false</civilian>
+ </model>
+ <rendering>
+    <refl_correction type="string">-1.5</refl_correction>
+    </rendering>
+</sim>
+
+</PropertyList>
