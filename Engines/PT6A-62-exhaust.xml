@@ -25,7 +25,7 @@
 -->
 
 <turbine_engine name="PT-6A-exhaust">
-  <milthrust> 624.0 </milthrust>
+  <milthrust> 124.0 </milthrust>
   <bypassratio>     1.000 </bypassratio>
   <tsfc>            0.0 </tsfc>
   <bleed>           0.03</bleed>
