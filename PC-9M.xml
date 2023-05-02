@@ -8,7 +8,6 @@
 
     <fileheader>
         <author> Erik Hofman, David Culp </author>
-        <filecreationdate> 2011-1-1 </filecreationdate>
         <version>$Revision: 1.9 $</version>
         <description> PC-9M </description>
     </fileheader>
@@ -74,7 +73,7 @@
             <rolling_friction> 0.02 </rolling_friction>
             <spring_coeff unit="LBS/FT"> 1389.1 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 463.1 </damping_coeff>
-            <max_steer unit="DEG"> 20 </max_steer>
+            <max_steer unit="DEG"> 160 </max_steer>
    <!--*****5*****-->
             <brake_group> NONE </brake_group>
             <retractable>1</retractable>
